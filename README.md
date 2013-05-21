@@ -3,11 +3,11 @@ MindFlex-NodeCopter
 
 Trigger a NodeCopter js file by thinking hard
 
-1) Hack a MindFlex headset. (www.frontiernerds.com/Mind-Hack)
+1) Hack a MindFlex headset.  (www.frontiernerds.com/Mind-Hack)
 
-2) Install Processing
+2) Install Processing.       (http://processing.org/download/)
 
-3) Install Node.js
+3) Install Node.js.          (http://nodejs.org/download/) 
 
 2) Plug the headset into a com port
 
@@ -25,4 +25,4 @@ Trigger a NodeCopter js file by thinking hard
     will be signaled to launch, hover, rotate, and land.
     
 
-**As of right now, you have to keep running the js file - I'm working on a fix for this. 
+**As of right now, you have to keep running the js file - I'm working on a fix for this.
