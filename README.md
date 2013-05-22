@@ -1,7 +1,7 @@
 MindFlex-NodeCopter
 ===================
 
-Trigger a NodeCopter js file by thinking hard
+Make your AR Drone 2.0 take off by thinking hard.
 
 1) Hack a MindFlex headset.  (www.frontiernerds.com/Mind-Hack)
 
@@ -9,13 +9,13 @@ Trigger a NodeCopter js file by thinking hard
 
 3) Install Node.js.          (http://nodejs.org/download/) 
 
-4) Plug the headset into a com port
+4) Plug the headset into a com port.
 
-5) Turn on the drone and connect your computer to its wifi
+5) Turn on the drone and connect your computer to its wifi.
 
 6) Open the Processing sketch - run it to make sure you're getting packets. If you're not, try a different COM port?
 
-7) Edit the JS file to contain the path of the data folder of the processing sketch
+7) Edit the JS file to contain the path of the data folder of the processing sketch.
 
 8) Open command prompt. cd into the folder containing your JS file.
 
@@ -25,4 +25,8 @@ Trigger a NodeCopter js file by thinking hard
     will be signaled to launch, hover, rotate, and land.
     
 
-**As of right now, you have to keep running the js file - I'm working on a fix for this.
+**As of right now, you have to keep running the js file - it only listens for about a second - I'm working on a fix for this.
+**This is a proof of concept and in development - if you have any ideas, feel free to let me know.
+
+Thanks!
+Robert
