@@ -21,12 +21,10 @@ Make your AR Drone 2.0 take off by thinking hard.
 
 9) Type "node readFile_takeOffAndLand.js"
 
-10) If you've got a good connection [0]>200, and your "Attention" [1] is greater than 50, the quadcopter
-    will be signaled to launch, hover, rotate, and land.
-    
+10) Think hard and watch your nodecopter take off for 2 seconds and land.
 
-**As of right now, you have to keep running the js file - it only listens for about a second - I'm working on a fix for this.
-**This is a proof of concept and in development - if you have any ideas, feel free to let me know.
+**ISSUES: Make sure you stop the node program (hit ctrl+c) if anything is going awry. If you take the headset off and the last reading was above 50, then the quad will continue to take off and land indefinitely.
+**Working on a fix for this
 
 Thanks!
 Robert
