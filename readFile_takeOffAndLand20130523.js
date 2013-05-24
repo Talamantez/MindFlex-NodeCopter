@@ -36,6 +36,6 @@ function fly(){
 			}					
 					);
   setTimeout(fly,10000);
-  i+=1;
+  
   }
   }
