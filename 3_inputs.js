@@ -8,9 +8,9 @@ getReading();
 
 function getReading(){
 //get the data from  the headsets
-	var array1 = fs.readFileSync('C:/users/rtalaman/documents/processing/Brain_to_rectangles/data/data.txt').toString().split("\n");
-	var array2 = fs.readFileSync('C:/users/rtalaman/documents/processing/Brain_to_rectangles1/data/data.txt').toString().split("\n");
-	var array3 = fs.readFileSync('C:/users/rtalaman/documents/processing/Brain_to_rectangles2/data/data.txt').toString().split("\n");
+	var array1 = fs.readFileSync('C:/users/rtalaman/documents/processing/Brain_to_rectangles_1st_input/data/data.txt').toString().split("\n");
+	var array2 = fs.readFileSync('C:/users/rtalaman/documents/processing/Brain_to_rectangles_2nd_input/data/data.txt').toString().split("\n");
+	var array3 = fs.readFileSync('C:/users/rtalaman/documents/processing/Brain_to_rectangles_3rd_input/data/data.txt').toString().split("\n");
 //log the data	
 	var attention1=array1[1];
 		console.log('headset 1: '+attention1);
@@ -32,13 +32,13 @@ var winningHeadset;
 var choice=winningHeadset;
 	switch(choice)
 {
-case 0:
+case 1:
 		fly();
 		console.log('flying');
-case 1:
+case 2:
 		client.front(0.5);
 		console.log('rotating');
-case 2:		
+case 3:		
 		console.log('landing');
 }				
 	setTimeout(getReading,2000);
