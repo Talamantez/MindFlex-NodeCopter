@@ -35,11 +35,14 @@ var choice=winningHeadset;
 case 1:
 		fly();
 		console.log('flying');
+		break;
 case 2:
-		client.front(0.5);
+		client.clockwise(0.5);
 		console.log('rotating');
+		break;
 case 3:		
 		console.log('landing');
+		break;
 }				
 	setTimeout(getReading,2000);
 }
