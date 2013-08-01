@@ -41,7 +41,7 @@ void draw() {
 
   
 if(v>=1){
-    int w=PApplet.parseInt(data[1]);
+  int w=PApplet.parseInt(data[1]);
   int z=PApplet.parseInt(data[2]);
   fill(0);
   rect(0,0,width,height);
