@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MINDFLEX - NODECOPTER</title>
+	<head>
+	<body>
+		<h1>MINDFLEX - NODECOPTER</h1>
+		<h2>DATA</h2>
+		<p id="brainData"></p>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io.connect('http://127.0.0.1:3000');
+			var brainData = document.getElementById('brainData');
+			socket.on('connection_1', function(data){
+				//alert('connection_1_has_changed to ' + data.number)
+				console.log('Incoming Brain Data...');
+				brainData.innerHTML = 'connection 1:' + data.number;
+				sleep(1000);
+						socket.emit('get_connection_1');
+														}
+						);
+		</script>
+		<script>
+			function sleep(ms) {
+				var start = new Date().getTime(), expire = start + ms;
+				while (new Date().getTime() < expire) { }
+				return;
+}
+		</script>
+	</body>
+</html>
