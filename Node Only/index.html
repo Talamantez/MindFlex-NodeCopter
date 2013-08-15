@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style type="text/css">
+		.page{
+			background-color: #B2FD96;
+			}
+		.display{
+			font-size: 8pt;
+			background-color: #FFFF22;
+			border-radius: 10px;
+			border-color: #56333D;
+			padding: 10px;
+			margin-left: 30px;
+			margin-top: 5px;
+			}
+		.h1{
+			font-size: 8pt;
+			margin-left: 30px;
+			}
+			</style>
+	
+		<title>MINDFLEX - NODECOPTER</title>
+	<head>
+	<body class="page">
+	
+		<h1 class="h1">MINDFLEX - NODECOPTER</h1>
+		<div class="display" id="headset_1">
+			<div id="airStateReadOut"></div>
+			<div id="CXN_1"></div>
+			<div id="ATN_1"></div>
+			<div id="MTN_1"></div>
+		</div>
+		<div class="display" id="headset_2">
+			<div id="rotationStateReadOut"></div>
+			<div id="CXN_2"></div>
+			<div id="ATN_2"></div>
+			<div id="MTN_2"></div>
+		</div>
+		<div class="display" id="headset_3">
+			<div id="forwardStateReadOut"></div>
+			<div id="CXN_3"></div>
+			<div id="ATN_3"></div>
+			<div id="MTN_3"></div>
+		</div>
+		</body>
+		
+		<script src="/socket.io/lib/socket.io.js"></script>
+		<script>
+			
+			var airState = document.getElementById('airStateReadOut');
+			var CXN_1 = document.getElementById('CXN_1');
+			var ATN_1 = document.getElementById('ATN_1');
+			var MTN_1 = document.getElementById('MTN_1');
+			
+			var rotationState = document.getElementById('rotationStateReadOut');
+			var CXN_2 = document.getElementById('CXN_2');
+			var ATN_2 = document.getElementById('ATN_2');
+			var MTN_2 = document.getElementById('MTN_2');
+			
+			var forwardState = document.getElementById('forwardStateReadOut');
+			var CXN_3 = document.getElementById('CXN_3');
+			var ATN_3 = document.getElementById('ATN_3');
+			var MTN_3 = document.getElementById('MTN_3');
+			
+			var socket = io.connect('http://127.0.0.1:3000');
+			var sp = '&nbsp;'
+			socket.on('brainData', function(data){
+			
+				//alert('connection_1_has_changed to ' + data)
+				console.log('Incoming Brain Data...');
+				console.log(data.number);
+			    console.log(data);
+				console.log(data.array[0]);
+			
+				CXN_1.innerHTML = 'Connection 1:' + sp + sp + sp + sp + data.array[0];
+			
+				ATN_1.innerHTML = 'Attention 1:' + sp + sp + sp + sp + sp + sp + sp + data.array[1];
+			
+				MTN_1.innerHTML = 'Meditation 1:' + sp + sp + sp + sp + sp + data.array[2];
+				
+				airState.innerHTML = 'Headset 1: Drone is ' + data.array[3];
+				
+	
+				CXN_2.innerHTML = 'Connection 2:' + sp + sp + sp + sp + data.array[4];
+		
+				ATN_2.innerHTML = 'Attention 2:' + sp + sp + sp + sp + sp + sp + sp + data.array[5];
+		
+				MTN_2.innerHTML = 'Meditation 2:' + sp + sp + sp + sp + sp + data.array[6];
+				
+				rotationState.innerHTML = 'Headset 2: Drone is ' + data.array[7];
+				
+		
+				CXN_3.innerHTML = 'Connection 3:' + sp + sp + sp + sp + data.array[8];
+		
+				ATN_3.innerHTML = 'Attention 3:' + sp + sp + sp + sp + sp + sp + sp + data.array[9];
+				
+				MTN_3.innerHTML = 'Meditation 3:' + sp + sp + sp + sp + data.array[10];
+				
+				forwardState.innerHTML = 'Headset 3: Drone is ' + data.array[11];
+				
+				
+				sleep(2000);
+						socket.emit('requestBrainData');
+							}
+						);
+		</script>
+		<script>
+			function sleep(ms) {
+				var start = new Date().getTime(), expire = start + ms;
+				while (new Date().getTime() < expire) { }
+				return;
+}
+		</script>
+	
+</html>
