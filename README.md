@@ -13,6 +13,7 @@ what you need:
 Inside the directory you'll find 2 files:
 
 1) server_sockets.js
+  * parses mindflex data from 3 serial ports
   * serves brain data to 127.0.0.1:3000
   * controls AR Drone 2.0
     * headset 1: Takeoff/Landing
@@ -23,6 +24,8 @@ Inside the directory you'll find 2 files:
   * posts connection quality, attention, and meditation data for each headset
   * posts drone flight states
   
+Have fun and if you have any questions or ideas for improving it, please let me know.
 
-Have fun and if you have any questions or ideas for improving it, hit me up.
+
+Invaluable resource from which all drone commands come: http://nodecopter.com/
 
