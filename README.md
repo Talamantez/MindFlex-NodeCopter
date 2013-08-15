@@ -18,6 +18,7 @@ Inside the directory you'll find 2 files:
     * headset 1: Takeoff/Landing
     * headset 2: Unidirectional Rotation
     * headset 3: Pulsed Forward Motion
+    
 2) index.html
   * posts connection quality, attention, and meditation data for each headset
   * posts drone flight states
