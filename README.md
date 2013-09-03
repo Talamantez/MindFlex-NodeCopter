@@ -24,6 +24,7 @@ Inside the "Node Only" you'll find 2 files:
 2) index.html
   * posts connection quality, attention, and meditation data for each headset
   * posts drone flight states
+  * posts drone video feed
   
 Have fun and if you have any questions or ideas for improving it, please let me know.
 
