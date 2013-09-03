@@ -15,6 +15,7 @@ Inside the "Node Only" you'll find 2 files:
 1) Brain_Drone_Control_and_Video_Feed.js
   * parses mindflex data from 3 serial ports
   * serves brain data to 127.0.0.1:3000
+  * serves drone video feed to 127.0.0.1:5555
   * controls AR Drone 2.0
     * headset 1: Takeoff/Landing
     * headset 2: Unidirectional Rotation
