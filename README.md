@@ -1,5 +1,7 @@
 MindFlex-NodeCopter (Trialectic)
 ===================
+Note: The code at Talamantez/Mindflex_Nodecopter is more recent.
+Another Note: Visit github.com/thinkcopter for a current project to connect the mindflex to the nodecopter over the web
 
 You and 2 friends (or enemies) can fly a quadcopter with your minds!
 
